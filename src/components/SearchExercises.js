@@ -4,10 +4,11 @@ import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 
 const SearchExercises = () => {
-
+  
   //logic part for fetching data
   const [search, setSearch] = useState('')
-  const [exercises, setExercises] = useState([])
+  const [exercises, setExercises] = useState([]);
+
 
   const handleSearch = async() => {             //async means it takes some time to pull data from api
     if(search) {
@@ -20,7 +21,7 @@ const SearchExercises = () => {
           || exercise.equipment.toLowerCase().includes(search)
           || exercise.bodyPart.toLowerCase().includes(search)
         );
-
+         
         setSearch('');
         setExercises(searchedExercises);
     }
@@ -54,6 +55,7 @@ const SearchExercises = () => {
           Search
         </Button>
       </Box>
+
     </Stack>
   )
 }
