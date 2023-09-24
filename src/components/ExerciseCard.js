@@ -26,4 +26,4 @@ const ExerciseCard = ({ exercise }) => {
   )
 }
 
-export default ExerciseCard
+export default ExerciseCard;
